@@ -26,7 +26,7 @@ function preload(){
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
 
-  myMap = mappa.tileMap(options);
+  myMap = mapboxgl.tileMap(options);
   myMap.overlay(canvas); // sets map to canvas size
 }
 

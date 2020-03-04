@@ -1,12 +1,13 @@
 // MAPBOX: fancy maps //
 // var distance = calcGeoDistance(lat1, lon1, lat2, lon2, "km"); // how to calculate distance
 
+
 let myMap; // creates variable to hold Map
 let canvas; // creates variable to hold canvases
 let position;
-const mappa = new Mappa('MapboxGL', "pk.eyJ1Ijoia2lhYTE5OTgiLCJhIjoiY2s0c21leTR2MWs1eTNtdDI0eHExcGRtYiJ9.HhpcAYDQMHv8e-8UIFQX2A");
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2lhYTE5OTgiLCJhIjoiY2s0c21leTR2MWs1eTNtdDI0eHExcGRtYiJ9.HhpcAYDQMHv8e-8UIFQX2A';
+var map = new mapboxgl.Map;
 // Sets map using MapboxGL
-
 var duomoLat = 45.4641013; // sets latitude for Duomo
 var duomoLon = 9.1897325; // sets longitude for Duomo
 
@@ -16,8 +17,7 @@ const options = { // sets standard view on load
   lng: duomoLon,
   zoom: 12,
   // style: "mapbox://styles/mapbox/traffic-night-v2", // alternative map styles
-  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png" // default tile for Leaflet
-
+  style: 'mapbox://styles/mapbox/streets-v11',
 }
 
 function preload(){

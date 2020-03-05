@@ -5,8 +5,7 @@
 let myMap; // creates variable to hold Map
 let canvas; // creates variable to hold canvases
 let position;
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2lhYTE5OTgiLCJhIjoiY2s0c21leTR2MWs1eTNtdDI0eHExcGRtYiJ9.HhpcAYDQMHv8e-8UIFQX2A';
-var map = new mapboxgl.Map;
+const mappa = new Mappa('MapboxGL', "pk.eyJ1Ijoia2lhYTE5OTgiLCJhIjoiY2s0c21leTR2MWs1eTNtdDI0eHExcGRtYiJ9.HhpcAYDQMHv8e-8UIFQX2A");
 // Sets map using MapboxGL
 var duomoLat = 45.4641013; // sets latitude for Duomo
 var duomoLon = 9.1897325; // sets longitude for Duomo
@@ -26,7 +25,7 @@ function preload(){
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
 
-  myMap = mapboxgl.tileMap(options);
+  myMap = mappa.tileMap(options);
   myMap.overlay(canvas); // sets map to canvas size
 }
 
